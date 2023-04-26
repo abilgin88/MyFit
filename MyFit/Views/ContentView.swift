@@ -11,12 +11,9 @@ struct ContentView: View {
   var body: some View {
     // create tabview for the pages and add tabItem modifier
     TabView {
-      Text("Welcome")
-       // .tabItem { Text("Welcome") }
-      Text("Exercise 1")
-        //.tabItem { Text("Exercise 1") }
+      WelcomeView()  // was Text("Welcome")
+      ExerciseView(index: 0) // was Text("Exercise 2")
       Text("Exercise 2")
-       // .tabItem { Text("Exercise 2") }
     }
     // To make the tabs behave like pages
     .tabViewStyle(PageTabViewStyle())
