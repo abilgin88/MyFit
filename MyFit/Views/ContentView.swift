@@ -11,15 +11,14 @@ struct ContentView: View {
   var body: some View {
     // create tabview for the pages and add tabItem modifier
     TabView {
-      WelcomeView()  // was Text("Welcome")
-      ExerciseView(index: 0) // was Text("Exercise 2")
-      Text("Exercise 2")
+      WelcomeView()
+      // loop over the range for excercises
+      ForEach(0 ..< 4) { index in
+        ExerciseView(index: index)
+      }
     }
-    // To make the tabs behave like pages
-    .tabViewStyle(PageTabViewStyle())
-    // style uses small index dot
-    .indexViewStyle(
-      PageIndexViewStyle(backgroundDisplayMode: .always))
+    // remove dots
+    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
   }
 }
 
