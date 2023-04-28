@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D59058F29FBAA3E0078E94F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59058E29FBAA3E0078E94F /* HeaderView.swift */; };
 		8519135B29F8D18B0093105D /* MyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135A29F8D18B0093105D /* MyFitApp.swift */; };
 		8519135D29F8D18B0093105D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135C29F8D18B0093105D /* ContentView.swift */; };
 		8519135F29F8D18C0093105D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8519135E29F8D18C0093105D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D59058E29FBAA3E0078E94F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8519135729F8D18B0093105D /* MyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8519135A29F8D18B0093105D /* MyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFitApp.swift; sourceTree = "<group>"; };
 		8519135C29F8D18B0093105D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				8519135C29F8D18B0093105D /* ContentView.swift */,
 				8519136829F8D2AF0093105D /* WelcomeView.swift */,
 				8519136A29F8D2BE0093105D /* ExerciseView.swift */,
+				0D59058E29FBAA3E0078E94F /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D59058F29FBAA3E0078E94F /* HeaderView.swift in Sources */,
 				8519136B29F8D2BE0093105D /* ExerciseView.swift in Sources */,
 				8519135D29F8D18B0093105D /* ContentView.swift in Sources */,
 				8519136929F8D2AF0093105D /* WelcomeView.swift in Sources */,
