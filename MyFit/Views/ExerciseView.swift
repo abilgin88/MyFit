@@ -20,7 +20,15 @@ struct ExerciseView: View {
             VStack {
                 Text(exerciseNames[index])
                     .font(.largeTitle)
-            }  // headerview -> own file
+                HStack {
+                    Image(systemName: "1.circle")
+                        .font(.largeTitle) // Overriding the stack’s font size for the first symbol
+                    Image(systemName: "2.circle")
+                    Image(systemName: "3.circle")
+                    Image(systemName: "4.circle")
+                }
+                .font(.title2) // font size applies to all views in the HStack
+            }
             
             Text("Video player") // simple view -> create here
             Text("Timer") // simple view -> create here
@@ -34,5 +42,5 @@ struct ExerciseView: View {
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
       ExerciseView(index: 0)
-    }ç
+    }
 }
