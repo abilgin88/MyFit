@@ -17,7 +17,11 @@ struct ExerciseView: View {
       // display the correct name for each exercise
         VStack {
             // outlining the exercises view
-            Text(exerciseNames[index])  // headerview -> own file
+            VStack {
+                Text(exerciseNames[index])
+                    .font(.largeTitle)
+            }  // headerview -> own file
+            
             Text("Video player") // simple view -> create here
             Text("Timer") // simple view -> create here
             Text("Start/Done button") // simple view -> create here
