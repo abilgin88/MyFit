@@ -19,6 +19,8 @@ struct ExerciseView: View {
             VStack {
                 HeaderView(exerciseName: exerciseNames[index])
                     .padding(.bottom)
+                
+                // Video Player
                 if let url = Bundle.main.url(
                     forResource: videoNames[index],
                     withExtension: "mp4") {
@@ -28,17 +30,24 @@ struct ExerciseView: View {
                     Text("Couldn't find \(videoNames[index]).mp4")
                         .foregroundColor(.red)
                 }
+                // timer
                 Text(
                     Date()
                         .addingTimeInterval(interval), style: .timer
                 )
                 .font(.system(size: 90))
                 
+                // Start/Done button
+                Button("Start/Done") {}
+                    .font(.title3)
+                    .padding()
                 
-                
-                Text("Start/Done button")
                 Text("Rating")
-                Text("History button")
+                
+                // History button
+                Spacer()
+                Button("History") {}
+                    .padding(.bottom)
             }
         }
     }
