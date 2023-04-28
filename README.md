@@ -12,7 +12,7 @@ Open the project in Xcode by double-clicking the Bullseye.xcodeproj file.
 Build and run the project in Xcode.
 
 ### Project Board: 
-https://github.com/users/abilgin88/projects/4/views/1
+https://github.com/users/abilgin88/projects/8
 
 ## What user sees
 
