@@ -15,7 +15,15 @@ struct ExerciseView: View {
   
     var body: some View {
       // display the correct name for each exercise
-        Text(exerciseNames[index])
+        VStack {
+            // outlining the exercises view
+            Text(exerciseNames[index])  // headerview -> own file
+            Text("Video player") // simple view -> create here
+            Text("Timer") // simple view -> create here
+            Text("Start/Done button") // simple view -> create here
+            Text("Rating") // ratingview -> own file
+            Text("History button")
+        }
     }
 }
 
