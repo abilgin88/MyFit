@@ -25,10 +25,12 @@ struct WelcomeView: View {
                     .font(.headline)
                 }
                   Image("step-up")
-                      .resizable()
-                      .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                      .frame(width: 240.0, height: 240.0)
-                      .clipShape(Circle())
+                        .resizedToFill(width: 240, height: 240)
+                        .clipShape(Circle())
+//                      .resizable()
+//                      .aspectRatio(contentMode: .fill)
+//                      .frame(width: 240.0, height: 240.0)
+
               }
             }
 
