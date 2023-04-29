@@ -23,21 +23,25 @@ struct HistoryView: View {
                     header:
                         Text(today.formatted(as: "MMM d"))
                         .font(.headline)) {
-                            // section content
+                            ForEach(exercises1, id: \.self) { exercise in
+                                Text(exercise)
+                            }
                         }
                 Section(
                     header:
                         Text(yesterday.formatted(as: "MMM d"))
                         .font(.headline)) {
-                            // Section content
+                            ForEach(exercises2, id: \.self) { exercise in
+                                Text(exercise)
+                            }
                         }
             }
         }
     }
-}
-
-struct HistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoryView()
+    
+    struct HistoryView_Previews: PreviewProvider {
+        static var previews: some View {
+            HistoryView()
+        }
     }
 }
