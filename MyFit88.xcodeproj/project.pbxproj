@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D59058F29FBAA3E0078E94F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59058E29FBAA3E0078E94F /* HeaderView.swift */; };
 		0D97405329FBF1DF007F0FFF /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97405229FBF1DF007F0FFF /* RatingView.swift */; };
+		0D97405529FCEE59007F0FFF /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97405429FCEE59007F0FFF /* HistoryView.swift */; };
 		8519135B29F8D18B0093105D /* MyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135A29F8D18B0093105D /* MyFitApp.swift */; };
 		8519135D29F8D18B0093105D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135C29F8D18B0093105D /* ContentView.swift */; };
 		8519135F29F8D18C0093105D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8519135E29F8D18C0093105D /* Assets.xcassets */; };
@@ -24,7 +25,8 @@
 /* Begin PBXFileReference section */
 		0D59058E29FBAA3E0078E94F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0D97405229FBF1DF007F0FFF /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		8519135729F8D18B0093105D /* MyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D97405429FCEE59007F0FFF /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		8519135729F8D18B0093105D /* MyFit88.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFit88.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8519135A29F8D18B0093105D /* MyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFitApp.swift; sourceTree = "<group>"; };
 		8519135C29F8D18B0093105D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8519135E29F8D18C0093105D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		8519135829F8D18B0093105D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8519135729F8D18B0093105D /* MyFit.app */,
+				8519135729F8D18B0093105D /* MyFit88.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +91,7 @@
 				8519135C29F8D18B0093105D /* ContentView.swift */,
 				8519136829F8D2AF0093105D /* WelcomeView.swift */,
 				8519136A29F8D2BE0093105D /* ExerciseView.swift */,
+				0D97405429FCEE59007F0FFF /* HistoryView.swift */,
 				0D97405229FBF1DF007F0FFF /* RatingView.swift */,
 				0D59058E29FBAA3E0078E94F /* HeaderView.swift */,
 			);
@@ -118,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8519135629F8D18B0093105D /* MyFit */ = {
+		8519135629F8D18B0093105D /* MyFit88 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8519136529F8D18C0093105D /* Build configuration list for PBXNativeTarget "MyFit" */;
+			buildConfigurationList = 8519136529F8D18C0093105D /* Build configuration list for PBXNativeTarget "MyFit88" */;
 			buildPhases = (
 				8519135329F8D18B0093105D /* Sources */,
 				8519135429F8D18B0093105D /* Frameworks */,
@@ -130,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = MyFit;
+			name = MyFit88;
 			productName = MyFit;
-			productReference = 8519135729F8D18B0093105D /* MyFit.app */;
+			productReference = 8519135729F8D18B0093105D /* MyFit88.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8519135229F8D18B0093105D /* Build configuration list for PBXProject "MyFit" */;
+			buildConfigurationList = 8519135229F8D18B0093105D /* Build configuration list for PBXProject "MyFit88" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8519135629F8D18B0093105D /* MyFit */,
+				8519135629F8D18B0093105D /* MyFit88 */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D97405529FCEE59007F0FFF /* HistoryView.swift in Sources */,
 				0D59058F29FBAA3E0078E94F /* HeaderView.swift in Sources */,
 				8519136B29F8D2BE0093105D /* ExerciseView.swift in Sources */,
 				8519135D29F8D18B0093105D /* ContentView.swift in Sources */,
@@ -331,12 +335,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bilgin.MyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = bilgin88.MyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,12 +365,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bilgin.MyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = bilgin88.MyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -376,7 +382,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8519135229F8D18B0093105D /* Build configuration list for PBXProject "MyFit" */ = {
+		8519135229F8D18B0093105D /* Build configuration list for PBXProject "MyFit88" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8519136329F8D18C0093105D /* Debug */,
@@ -385,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8519136529F8D18C0093105D /* Build configuration list for PBXNativeTarget "MyFit" */ = {
+		8519136529F8D18C0093105D /* Build configuration list for PBXNativeTarget "MyFit88" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8519136629F8D18C0093105D /* Debug */,
