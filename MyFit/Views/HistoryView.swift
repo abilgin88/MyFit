@@ -15,9 +15,23 @@ struct HistoryView: View {
     
     var body: some View {
         VStack {
-          Text("History")
+            Text("History")
                 .font(.title)
                 .padding()
+            Form {
+                Section(
+                    header:
+                        Text(today.formatted(.dateTime.day().month()))
+                        .font(.headline)) {
+                            // section content
+                        }
+                Section(
+                    header:
+                        Text(yesterday.formatted(.dateTime.day().month()))
+                        .font(.headline)) {
+                            // Section content
+                        }
+            }
         }
     }
 }
