@@ -14,26 +14,34 @@ struct WelcomeView: View {
                 HeaderView(titleText: "Welcome")
                 Spacer()
                 Button("History") { }
-                  .padding(.bottom)
+                    .padding(.bottom)
             }
             VStack {
                 HStack (alignment: .bottom) {
-                VStack(alignment: .leading) {
-                  Text("Get fit")
-                    .font(.largeTitle)
-                  Text("with high intensity interval training")
-                    .font(.headline)
-                }
-                  Image("step-up")
+                    VStack(alignment: .leading) {
+                        Text("Get fit")
+                            .font(.largeTitle)
+                        Text("with high intensity interval training")
+                            .font(.headline)
+                    }
+                    Image("step-up")
                         .resizedToFill(width: 240, height: 240)
                         .clipShape(Circle())
-//                      .resizable()
-//                      .aspectRatio(contentMode: .fill)
-//                      .frame(width: 240.0, height: 240.0)
-
-              }
+                }
+                
+                Button(action: { }) {
+                    Text("Get Started")
+                    Image(systemName: "arrow.right.circle")
+                }
+                .font(.title2)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.gray, lineWidth: 2)
+                )
             }
-
+            
+            
         }
     }
 }
