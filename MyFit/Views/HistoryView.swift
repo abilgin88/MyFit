@@ -21,13 +21,13 @@ struct HistoryView: View {
             Form {
                 Section(
                     header:
-                        Text(today.formatted(.dateTime.day().month()))
+                        Text(today.formatted(as: "MMM d"))
                         .font(.headline)) {
                             // section content
                         }
                 Section(
                     header:
-                        Text(yesterday.formatted(.dateTime.day().month()))
+                        Text(yesterday.formatted(as: "MMM d"))
                         .font(.headline)) {
                             // Section content
                         }
