@@ -18,3 +18,20 @@ struct Exercise {
         case sunSalute = "Sun Salute"
     }
 }
+
+extension Exercise {
+    static let exercises = [
+    Exercise(
+        exerciseName: ExerciseEnum.squat.rawValue,
+        VideoName: "squat"),
+    Exercise(
+        exerciseName: ExerciseEnum.stepUp.rawValue,
+        VideoName: "step-up"),
+    Exercise(
+        exerciseName: ExerciseEnum.burpee.rawValue,
+        VideoName: "burpee"),
+    Exercise(
+        exerciseName: ExerciseEnum.sunSalute.rawValue,
+        VideoName: "sun-salute"),
+    ]
+}
