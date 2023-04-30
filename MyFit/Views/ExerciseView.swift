@@ -17,7 +17,7 @@ struct ExerciseView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: exerciseNames[index])
+                HeaderView(titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
                 
                 // Video Player
@@ -27,7 +27,7 @@ struct ExerciseView: View {
                     VideoPlayer(player: AVPlayer(url: url))
                         .frame(height: geometry.size.height * 0.45)
                 } else {
-                    Text("Couldn't find \(videoNames[index]).mp4")
+                    Text("Couldn't find \(Exercise.exercises[index].VideoName).mp4")
                         .foregroundColor(.red)
                 }
                 // timer

@@ -13,7 +13,7 @@ struct ContentView: View {
     TabView {
       WelcomeView()
       // loop over the range for excercises
-      ForEach(0 ..< 4) { index in
+        ForEach(0 ..< Exercise.exercises.count) { index in
         ExerciseView(index: index)
       }
     }
