@@ -13,6 +13,7 @@
 		0DAEE6B129FD4B700081CFD4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE6B029FD4B700081CFD4 /* DateExtension.swift */; };
 		0DAEE6B429FD73860081CFD4 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE6B329FD73860081CFD4 /* ImageExtension.swift */; };
 		0DAEE6B629FD92010081CFD4 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEE6B529FD92010081CFD4 /* SuccessView.swift */; };
+		0DFC4CA229FE01FE00613236 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC4CA129FE01FE00613236 /* Exercise.swift */; };
 		8519135B29F8D18B0093105D /* MyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135A29F8D18B0093105D /* MyFitApp.swift */; };
 		8519135D29F8D18B0093105D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519135C29F8D18B0093105D /* ContentView.swift */; };
 		8519135F29F8D18C0093105D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8519135E29F8D18C0093105D /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		0DAEE6B029FD4B700081CFD4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		0DAEE6B329FD73860081CFD4 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		0DAEE6B529FD92010081CFD4 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		0DFC4CA129FE01FE00613236 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8519135729F8D18B0093105D /* MyFit88.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFit88.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8519135A29F8D18B0093105D /* MyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFitApp.swift; sourceTree = "<group>"; };
 		8519135C29F8D18B0093105D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				0DAEE6B029FD4B700081CFD4 /* DateExtension.swift */,
 				0DAEE6B329FD73860081CFD4 /* ImageExtension.swift */,
+				0DFC4CA129FE01FE00613236 /* Exercise.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				0D59058F29FBAA3E0078E94F /* HeaderView.swift in Sources */,
 				8519136B29F8D2BE0093105D /* ExerciseView.swift in Sources */,
 				8519135D29F8D18B0093105D /* ContentView.swift in Sources */,
+				0DFC4CA229FE01FE00613236 /* Exercise.swift in Sources */,
 				0D97405329FBF1DF007F0FFF /* RatingView.swift in Sources */,
 				8519136929F8D2AF0093105D /* WelcomeView.swift in Sources */,
 				0DAEE6B429FD73860081CFD4 /* ImageExtension.swift in Sources */,
