@@ -38,7 +38,10 @@ struct ExerciseView: View {
                 .font(.system(size: 90))
                 
                 // Start/Done button
-                Button("Start/Done") {}
+                Button(NSLocalizedString(
+                    "Start/Done",
+                    comment: "begin exercise / mark as finished")
+                ) {}
                     .font(.title3)
                     .padding()
                 
@@ -48,7 +51,7 @@ struct ExerciseView: View {
                 
                 // History button
                 Spacer()
-                Button("History") {}
+                Button(NSLocalizedString("History", comment: "view user activity")) {}
                     .padding(.bottom)
             }
         }
