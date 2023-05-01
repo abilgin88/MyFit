@@ -64,15 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DAEE6B229FD736A0081CFD4 /* Models */ = {
+		0DFC4CAD29FF8F1D00613236 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DAEE6B029FD4B700081CFD4 /* DateExtension.swift */,
 				0DFC4CA329FE0C6C00613236 /* HistoryStore.swift */,
 				0DAEE6B329FD73860081CFD4 /* ImageExtension.swift */,
 				0DFC4CA129FE01FE00613236 /* Exercise.swift */,
+				0DAEE6B029FD4B700081CFD4 /* DateExtension.swift */,
 			);
-			name = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8519134E29F8D18B0093105D = {
@@ -94,11 +94,13 @@
 		8519135929F8D18B0093105D /* MyFit */ = {
 			isa = PBXGroup;
 			children = (
-				0DAEE6B229FD736A0081CFD4 /* Models */,
-				8519136D29F8D4080093105D /* Apps */,
-				8519136C29F8D2D30093105D /* Views */,
-				8519136029F8D18C0093105D /* Preview Content */,
 				8519136E29F8D51B0093105D /* Videos */,
+				8519136C29F8D2D30093105D /* Views */,
+				0DFC4CAD29FF8F1D00613236 /* Model */,
+				8519136029F8D18C0093105D /* Preview Content */,
+				8519135A29F8D18B0093105D /* MyFitApp.swift */,
+				8519135E29F8D18C0093105D /* Assets.xcassets */,
+				0DFC4CAB29FF70C500613236 /* Localizable.strings */,
 			);
 			path = MyFit;
 			sourceTree = "<group>";
@@ -124,16 +126,6 @@
 				0DAEE6B529FD92010081CFD4 /* SuccessView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8519136D29F8D4080093105D /* Apps */ = {
-			isa = PBXGroup;
-			children = (
-				8519135A29F8D18B0093105D /* MyFitApp.swift */,
-				8519135E29F8D18C0093105D /* Assets.xcassets */,
-				0DFC4CAB29FF70C500613236 /* Localizable.strings */,
-			);
-			path = Apps;
 			sourceTree = "<group>";
 		};
 		8519136E29F8D51B0093105D /* Videos */ = {
