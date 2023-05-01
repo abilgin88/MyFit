@@ -22,11 +22,11 @@ struct Exercise {
             case .squat:
                 return NSLocalizedString("Squat", comment: "exercise")
             case .stepUp:
-                return NSLocalizedString("Squat", comment: "exercise")
+                return NSLocalizedString("Step Up", comment: "exercise")
             case .burpee:
-                return NSLocalizedString("Squat", comment: "exercise")
+                return NSLocalizedString("Burpee", comment: "exercise")
             case .sunSalute:
-                return NSLocalizedString("Squat", comment: "exercise")
+                return NSLocalizedString("Sun Salute", comment: "exercise")
             }
         }
     }
