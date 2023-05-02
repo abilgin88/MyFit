@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct HeaderView: View {
-    // define an exerciseName property for text
     let titleText: String
+    @Binding var selectedTab: Int
     
     var body: some View {
         VStack {
             Text(titleText)
                 .font(.largeTitle)
             HStack {
-                Image(systemName: "hand.wave")
-                Image(systemName: "1.circle")
-                Image(systemName: "2.circle")
-                Image(systemName: "3.circle")
-                Image(systemName: "4.circle")
+                ForEach(Exercise.exercises.indices, id: \.self) { index in
+                    let fill = index == selectedTab ? ".fill" : ""
+                    Image(systemName: "\(index + 1).circle\(fill)")
+                        .onTapGesture {
+                            selectedTab = index
+                        }
+                }
             }
-            .font(.title2) // font size applies to all views in the HStack
+            .font(.title2)
         }
     }
 }
@@ -30,12 +32,12 @@ struct HeaderView: View {
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-          HeaderView(titleText: "Squat")
-            .previewLayout(.sizeThatFits)
-          HeaderView(titleText: "Squat")
-            .preferredColorScheme(.dark)
-            .environment(\.sizeCategory, .accessibilityLarge)
-            .previewLayout(.sizeThatFits)
+            HeaderView(titleText: "Squat", selectedTab: .constant(0))
+                .previewLayout(.sizeThatFits)
+            HeaderView(titleText: "Squat", selectedTab: .constant(0))
+                .preferredColorScheme(.dark)
+                .environment(\.sizeCategory, .accessibilityLarge)
+                .previewLayout(.sizeThatFits)
         }
     }
 }
