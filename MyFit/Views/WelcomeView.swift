@@ -31,7 +31,7 @@ struct WelcomeView: View {
                         .clipShape(Circle())
                 }
                 
-                Button(action: { }) {
+                Button(action: { selectedTab = 0 }) {
                     Text(NSLocalizedString("Get Started", comment: "invitation"))
                     Image(systemName: "arrow.right.circle")
                 }

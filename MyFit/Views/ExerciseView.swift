@@ -14,6 +14,9 @@ struct ExerciseView: View {
     @Binding var selectedTab: Int
     let index: Int
     let interval: TimeInterval = 30
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -39,12 +42,20 @@ struct ExerciseView: View {
                 .font(.system(size: 90))
                 
                 // Start/Done button
-                Button(NSLocalizedString(
-                    "Start/Done",
-                    comment: "begin exercise / mark as finished")
-                ) {}
-                    .font(.title3)
-                    .padding()
+                HStack(spacing: 150) {
+                    Button(NSLocalizedString(
+                        "Start Exercise",
+                        comment: "begin exercise")
+                    ) {}
+                    Button(NSLocalizedString(
+                        "Done",
+                        comment: "mark as finished")
+                    ) {
+                        selectedTab = lastExercise ? 9 : selectedTab + 1
+                    }
+                }
+                .padding()
+                .font(.title3)
                 
                 // rating view
                 RatingView()
