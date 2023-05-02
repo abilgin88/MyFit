@@ -11,6 +11,7 @@ import AVKit
 struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squatt", "Step Up", "Burpee", "Sun Salute"]
+    @State private var rating = 0
     @Binding var selectedTab: Int
     let index: Int
     let interval: TimeInterval = 30
@@ -65,7 +66,7 @@ struct ExerciseView: View {
                 .font(.title3)
                 
                 // rating view
-                RatingView()
+                RatingView(rating: $rating)
                     .padding()
                 
                 // History button
