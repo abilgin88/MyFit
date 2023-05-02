@@ -11,6 +11,7 @@ import AVKit
 struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squatt", "Step Up", "Burpee", "Sun Salute"]
+    @Binding var selectedTab: Int
     let index: Int
     let interval: TimeInterval = 30
     
@@ -60,7 +61,7 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(index: 0)
+        ExerciseView(selectedTab: .constant(1), index: 0)
     }
 }
 
