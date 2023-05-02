@@ -17,6 +17,21 @@ struct ExerciseView: View {
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
+    // Computed Properties for Button
+    var startButton: some View {
+        Button(NSLocalizedString(
+            "Start Exercise",
+            comment: "begin exercise")
+        ) {}
+    }
+    var doneButton: some View {
+        Button(NSLocalizedString(
+            "Done",
+            comment: "mark as finished")
+        ) {
+            selectedTab = lastExercise ? 9 : selectedTab + 1
+        }
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -43,16 +58,8 @@ struct ExerciseView: View {
                 
                 // Start/Done button
                 HStack(spacing: 150) {
-                    Button(NSLocalizedString(
-                        "Start Exercise",
-                        comment: "begin exercise")
-                    ) {}
-                    Button(NSLocalizedString(
-                        "Done",
-                        comment: "mark as finished")
-                    ) {
-                        selectedTab = lastExercise ? 9 : selectedTab + 1
-                    }
+                    startButton
+                    doneButton
                 }
                 .padding()
                 .font(.title3)
