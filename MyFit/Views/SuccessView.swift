@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SuccessView: View {
-
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedTab: Int
+    
     var body: some View {
         ZStack {
             VStack {
@@ -23,21 +25,25 @@ struct SuccessView: View {
                   Remember tomorrow's another day.
                   So eat well and get some rest.
                   """)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color.gray)
+                .multilineTextAlignment(.center)
+                .foregroundColor(Color.gray)
             }
             VStack {
                 Spacer()
-                Button("Continue") {}
-                    .padding()
+                Button("Continue") {
+                    selectedTab = 9
+                    dismiss()
+                }
+                .padding()
             }
-
+            
         }
     }
 }
 
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessView()
+        SuccessView(selectedTab: .constant(3))
+            .presentationDetents([.medium, .large])
     }
 }
