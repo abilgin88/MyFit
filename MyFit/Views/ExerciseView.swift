@@ -12,6 +12,7 @@ struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squatt", "Step Up", "Burpee", "Sun Salute"]
     @State private var rating = 0
+    @State private var showHistory = false
     @Binding var selectedTab: Int
     let index: Int
     let interval: TimeInterval = 30
@@ -71,8 +72,13 @@ struct ExerciseView: View {
                 
                 // History button
                 Spacer()
-                Button(NSLocalizedString("History", comment: "view user activity")) {}
-                    .padding(.bottom)
+                Button(NSLocalizedString("History", comment: "view user activity")) {
+                    showHistory.toggle()
+                }
+                .sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }
+                .padding(.bottom)
             }
         }
     }
