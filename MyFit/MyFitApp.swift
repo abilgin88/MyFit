@@ -12,6 +12,9 @@ struct MyFitApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    print(URL.documentsDirectory)
+                }
         }
     }
 }

@@ -11,7 +11,6 @@ import AVKit
 struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squatt", "Step Up", "Burpee", "Sun Salute"]
-    @State private var rating = 0
     @State private var showHistory = false
     @State private var showSuccess = false
     @Binding var selectedTab: Int
@@ -75,7 +74,7 @@ struct ExerciseView: View {
                 .font(.title3)
                 
                 // rating view
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 
                 // History button
