@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RatingView: View {
     let exerciseIndex: Int
-    @AppStorage("ratings") private var ratings = "0000"
+    @AppStorage("ratings") private var ratings = "4000"
     @State private var rating = 0
     let maximumRating = 5
     let onColor = Color.red
@@ -24,6 +24,13 @@ struct RatingView: View {
                     )
                     .onTapGesture {
                         rating = index
+                    }
+                    .onAppear {
+                        let index = ratings.index(
+                            ratings.startIndex,
+                        offsetBy: exerciseIndex)
+                        let character = ratings[index]
+                        rating = character.wholeNumberValue ?? 0
                     }
             }
         }
