@@ -31,6 +31,15 @@ struct RatingView: View {
         }
     }
     
+    // swiftlint:disable:next strict_fileprivate
+    fileprivate func converRating() {
+        let index = ratings.index(
+            ratings.startIndex,
+            offsetBy: exerciseIndex)
+        let character = ratings[index]
+        rating = character.wholeNumberValue ?? 0
+    }
+    
     var body: some View {
         HStack {
             ForEach(1 ..< maximumRating + 1, id:  \.self) { index in
@@ -41,12 +50,11 @@ struct RatingView: View {
                     .onTapGesture {
                         updateRating(index: index)
                     }
+                    .onChange(of: ratings) { _ in
+                        converRating()
+                    }
                     .onAppear {
-                        let index = ratings.index(
-                            ratings.startIndex,
-                            offsetBy: exerciseIndex)
-                        let character = ratings[index]
-                        rating = character.wholeNumberValue ?? 0
+                        converRating()
                     }
             }
         }
