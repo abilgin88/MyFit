@@ -68,6 +68,7 @@ struct ExerciseView: View {
                     doneButton
                         .sheet(isPresented: $showSuccess) {
                             SuccessView(selectedTab: $selectedTab)
+                                .presentationDetents([.medium,.large])
                         }
                 }
                 .padding()
