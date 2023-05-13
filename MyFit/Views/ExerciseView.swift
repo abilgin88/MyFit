@@ -60,15 +60,7 @@ struct ExerciseView: View {
                     Text("Couldn't find \(Exercise.exercises[index].VideoName).mp4")
                         .foregroundColor(.red)
                 }
-                // timer
-                if showTimer {
-                    TimerView(
-                        timerDone: $timerDone,
-                        size: geometry.size.height * 0.07
-                    )
-                }
-                
-                // Start/Done button
+
                 HStack(spacing: 150) {
                     startButton
                     doneButton
@@ -81,6 +73,14 @@ struct ExerciseView: View {
                 .padding()
                 .font(.title3)
                 
+                // timer
+                if showTimer {
+                    TimerView(
+                        timerDone: $timerDone,
+                        size: geometry.size.height * 0.07
+                    )
+                }
+                Spacer()
                 // rating view
                 RatingView(exerciseIndex: index)
                     .padding()
