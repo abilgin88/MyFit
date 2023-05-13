@@ -15,7 +15,8 @@ struct ExerciseView: View {
     @State private var showSuccess = false
     @Binding var selectedTab: Int
     let index: Int
-    let interval: TimeInterval = 30
+    @State private var timerDone = false
+    @State private var showTimer = false
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
@@ -24,13 +25,17 @@ struct ExerciseView: View {
         Button(NSLocalizedString(
             "Start Exercise",
             comment: "begin exercise")
-        ) {}
+        ) {
+            showTimer.toggle()
+        }
     }
     var doneButton: some View {
         Button(NSLocalizedString(
             "Done",
             comment: "mark as finished")
         ) {
+            timerDone = false
+            showTimer.toggle()
             if lastExercise {
                 showSuccess.toggle()
             } else {
@@ -56,16 +61,18 @@ struct ExerciseView: View {
                         .foregroundColor(.red)
                 }
                 // timer
-                Text(
-                    Date()
-                        .addingTimeInterval(interval), style: .timer
-                )
-                .font(.system(size: 90))
+                if showTimer {
+                    TimerView(
+                        timerDone: $timerDone,
+                        size: geometry.size.height * 0.07
+                    )
+                }
                 
                 // Start/Done button
                 HStack(spacing: 150) {
                     startButton
                     doneButton
+                        .disabled(!timerDone)
                         .sheet(isPresented: $showSuccess) {
                             SuccessView(selectedTab: $selectedTab)
                                 .presentationDetents([.medium,.large])
